@@ -60,11 +60,12 @@ section {
   background: radial-gradient(circle at top, #1a1a1a, #000);
   height: 100vh;
   min-height: 36rem;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 2rem 4.8rem;
+  padding: 0 2rem 2.6rem;
   overflow: hidden;
 }
 
@@ -193,42 +194,9 @@ section {
   animation: heroFade 0.85s ease 0.44s forwards;
 }
 
-.hero-scroll {
-  position: absolute;
-  left: 50%;
-  bottom: 1.4rem;
-  z-index: 3;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-  color: #8d8d8d;
-  text-decoration: none;
-  font-size: 0.58rem;
-  letter-spacing: 0.18em;
-  transition: color 0.25s ease;
-}
-
-.hero-scroll:hover,
-.hero-scroll:focus {
-  color: #f1c6dc;
-}
-
-.hero-scroll-arrow {
-  display: block;
-  font-size: 0.85rem;
-  animation: scrollNudge 2.4s ease-in-out infinite;
-}
-
 @keyframes heroFade {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes scrollNudge {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(5px); }
 }
 
 .projects .project-list {
@@ -236,7 +204,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 2.4rem 2rem;
   max-width: 860px;
-  margin: 2rem auto 0;
+  margin: 0 auto;
 }
 
 .project-card {
@@ -558,7 +526,11 @@ button {
 }
 
 .projects {
-  transition: transform 0.3s ease;
+  padding: 2.6rem 2rem 4rem;
+}
+
+.projects h2 {
+  margin: 0 0 40px;
 }
 
 .contact {
@@ -938,7 +910,7 @@ button[type='submit']:focus {
 
   .hero {
     min-height: 100svh;
-    padding-bottom: 4.2rem;
+    padding-bottom: 2.4rem;
   }
 
   .stella-bg-img {
@@ -979,8 +951,9 @@ button[type='submit']:focus {
     opacity: 1;
   }
 
-  .hero-scroll-arrow {
+  .stella-bg-img {
     animation: none;
+    opacity: 1;
   }
 }
 
