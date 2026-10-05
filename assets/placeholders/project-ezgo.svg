@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Project image placeholder">
+  <rect width="800" height="500" fill="#141414"/>
+  <rect x="28" y="28" width="744" height="444" rx="18" fill="#1c1c1c" stroke="#f1c6dc" stroke-opacity="0.4" stroke-width="2"/>
+  <polygon points="400,140 430,210 505,220 450,270 465,345 400,305 335,345 350,270 295,220 370,210" fill="none" stroke="#f1c6dc" stroke-width="2.5"/>
+  <text x="400" y="400" text-anchor="middle" fill="#f1c6dc" font-family="Arial, sans-serif" font-size="26">Image Placeholder</text>
+  <text x="400" y="438" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="16">EZGo Travel Planner</text>
+</svg>

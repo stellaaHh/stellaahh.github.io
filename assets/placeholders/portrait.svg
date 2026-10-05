@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500" role="img" aria-label="Portrait placeholder">
+  <rect width="400" height="500" fill="#161616"/>
+  <rect x="14" y="14" width="372" height="472" fill="none" stroke="#c9c9c9" stroke-opacity="0.28" stroke-width="1"/>
+  <circle cx="200" cy="210" r="46" fill="none" stroke="#f1c6dc" stroke-opacity="0.55" stroke-width="1.5"/>
+  <text x="200" y="300" text-anchor="middle" fill="#f1c6dc" font-family="Arial, sans-serif" font-size="16">Photo</text>
+  <text x="200" y="326" text-anchor="middle" fill="#777" font-family="Arial, sans-serif" font-size="12">4:5 placeholder</text>
+</svg>

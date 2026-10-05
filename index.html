@@ -5,54 +5,129 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Stella's  Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=15" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Page">
+      <a href="#project">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
   <section class="hero">
     <div class="hero-inner">
-      <h1 class="metal-text animate">HELLO</h1>
       <div class="stella-bg-container">
-        <img src="assets/IMG_3093.PNG" alt="Decorative Background" class="stella-bg-img-large" />
-        <img src="assets/IMG_3090.PNG" alt="Background" class="stella-bg-img" />
-        <img src="assets/IMG_3089.PNG" alt="Background" class="stella-star-img" />
-        <h2 class="metal-text animate">I'M STELLA</h2>
+        <img src="assets/IMG_3093.PNG" alt="" class="stella-bg-img-large" />
+        <img src="assets/IMG_3090.PNG" alt="" class="stella-bg-img" />
+        <img src="assets/IMG_3089.PNG" alt="" class="stella-star-img" />
+        <div class="hero-copy">
+          <p class="metal-text hero-hello">HELLO,</p>
+          <h1 class="metal-text hero-name">I'M <span class="hero-stella">STELLA</span>.</h1>
+          <p class="hero-statement">I create thoughtful experiences where people,<br>creativity &amp; technology meet.</p>
+          <p class="hero-school">HCDE @ University of Washington</p>
+        </div>
       </div>
-      <p class="tagline animate">Junior in HCDE @ UW· Passionate about creativity & technology</p>
     </div>
+    <a href="#project" class="hero-scroll">
+      SCROLL TO EXPLORE
+      <span class="hero-scroll-arrow" aria-hidden="true">↓</span>
+    </a>
   </section>
 
-  <section class="about animate">
-    <img src="assets/IMG_3089.PNG" alt="About Me Decoration" class="about-img-absolute" />
-    <h2 class="metallic-shine">About <span style="color: #f1c6dc;">Me</span></h2>
-    <div class="about-columns">
-      <ul>
-        <li><span style="color: #f1c6dc;">Junior</span> at the <span style="color: #f1c6dc;">University of Washington</span> majoring in <span style="color: #f1c6dc;">Human-Centered Design & Engineering</span> (HCDE)</li>
-        <li>Interested in how <span style="color: #f1c6dc;">design</span>, <span style="color: #f1c6dc;">art</span>, and <span style="color: #f1c6dc;">technology</span> come together to create meaningful <span style="color: #f1c6dc;">user experience</span>s</li>
-        <li>Experienced in user research, usability testing, and data analysis with <span style="color: #f1c6dc;">Python</span></li>
-        <li>Background in art, visual storytelling and Engineering</li>
-        <li>Exploring <span style="color: #f1c6dc;">Physical Prototyping </span> now</li>
-      </ul>
-      <img src="assets/IMG_3089.PNG" alt="About Me Decoration" class="about-img-absolute-copy" />
-    </div>
-    <a href="https://docs.google.com/document/d/1evsapyPGVK8ZyGYKHxQWvSx0G6Re6mFn/edit?usp=sharing&ouid=110472366887862299774&rtpof=true&sd=true" class="resume-btn" target="_blank">Resume</a>
-    <a href="https://docs.google.com/document/d/1XnoLS6TBQo7kmEej6sM180xGh3BukLaUx0tOGUQr_Hg/edit?usp=sharing" class="resume-btn" target="_blank">Personal Statement</a>
-
-  </section>
-  
-
-  <section class="projects animate">
+  <section id="project" class="projects animate">
     <h2 class="metallic-shine">Projects</h2>
     <div class="project-list">
-      <a href="https://docs.google.com/presentation/d/1nOY5Nm6zQatUffi6OYxGtLWV-mRlA58_g2KQVEXjDGg/edit?usp=sharing" class="project-card" target="_blank"><span style="color: #f1c6dc;">Scooter Parking Behavior User Research Project</span></a>
-      <a href="https://docs.google.com/presentation/d/1x2rdzPGcGHgqZlNrAZ8mToPaiTPaVPCk/edit?usp=sharing&ouid=110472366887862299774&rtpof=true&sd=true" class="project-card" target="_blank"><span style="color: #f1c6dc;">WAOFM Tableau Data Project</span></a>
-      <a href="https://docs.google.com/document/d/1Txn8NruATrfY8H6mArzzV2O1v2L_gRzb/edit?usp=sharing&ouid=110472366887862299774&rtpof=true&sd=true" class="project-card" target="_blank"><span style="color: #f1c6dc;">Redesign Exploration for FareStart</span></a>
-      <a href="https://huscooks.framer.website/" class="project-card" target="_blank"><span style="color: #f1c6dc;">Cooking Coordination Project</span></a>
-      <a href="https://canva.link/y6y95h20n4z9ujk" class="project-card" target="_blank"><span style="color: #f1c6dc;">EZGo Travel Planner</span></a>
+      <a href="projects/scooter.html" class="project-card">
+        <span class="project-thumb">
+          <img src="assets/placeholders/project-scooter.svg" alt="Scooter Parking Behavior User Research Project">
+        </span>
+        <h3 class="project-title">Scooter Parking Behavior</h3>
+        <p class="project-desc">A user research study on how people park shared scooters and what gets in the way.</p>
+      </a>
+      <a href="projects/waofm.html" class="project-card">
+        <span class="project-thumb">
+          <img src="assets/placeholders/project-waofm.svg" alt="WAOFM Tableau Data Project">
+        </span>
+        <h3 class="project-title">WAOFM Tableau Data Project</h3>
+        <p class="project-desc">A dashboard that turns public Washington data into clearer visual insights.</p>
+      </a>
+      <a href="projects/cooking.html" class="project-card">
+        <span class="project-thumb">
+          <img src="assets/placeholders/project-cooking.svg" alt="Cooking Coordination Project">
+        </span>
+        <h3 class="project-title">Cooking Coordination Project</h3>
+        <p class="project-desc">An app that helps UW roommates plan meals, split tasks, and cook together.</p>
+      </a>
+      <a href="projects/ezgo.html" class="project-card">
+        <span class="project-thumb">
+          <img src="assets/placeholders/project-ezgo.svg" alt="EZGo Travel Planner">
+        </span>
+        <h3 class="project-title">EZGo Travel Planner</h3>
+        <p class="project-desc">A travel planning tool that keeps itineraries, budgets, and ideas in one place.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="about animate">
+    <img src="assets/IMG_3089.PNG" alt="" class="about-star about-star--heading" />
+    <h2 class="metallic-shine">About <span style="color: #f1c6dc;">Me</span></h2>
+
+    <div class="about-intro">
+      <div class="about-portrait">
+        <img src="assets/placeholders/portrait.svg" alt="Portrait placeholder">
+      </div>
+      <div class="about-copy">
+        <h3>Hi, I'm Stella.</h3>
+        <p>I'm a Human-Centered Design &amp; Engineering student at the University of Washington, interested in how design, technology, and human behavior come together to shape meaningful experiences.</p>
+        <p>I enjoy turning observations and messy problems into ideas that feel intuitive, thoughtful, and a little unexpected.</p>
+        <p>Lately, I've been exploring physical prototyping and finding new ways to bring ideas off the screen.</p>
+        <a href="https://docs.google.com/document/d/1evsapyPGVK8ZyGYKHxQWvSx0G6Re6mFn/edit?usp=sharing&ouid=110472366887862299774&rtpof=true&sd=true" class="resume-text" target="_blank">View my résumé ↗</a>
+      </div>
+    </div>
+
+    <div class="about-life">
+      <img src="assets/IMG_3089.PNG" alt="" class="about-star about-star--gallery" />
+      <h3>When I'm not designing, you'll probably find me...</h3>
+      <div class="life-gallery" tabindex="0" aria-label="Personal photo gallery">
+        <div class="life-drag">
+        <div class="life-track">
+          <figure class="life-item life-item--wide">
+            <img src="assets/placeholders/life-landscape.svg" alt="Lifestyle photo placeholder">
+            <figcaption>chasing sunsets</figcaption>
+          </figure>
+          <figure class="life-item life-item--portrait">
+            <img src="assets/placeholders/life-portrait.svg" alt="Lifestyle photo placeholder">
+            <figcaption>trying new food</figcaption>
+          </figure>
+          <figure class="life-item life-item--square">
+            <img src="assets/placeholders/life-square.svg" alt="Lifestyle photo placeholder">
+            <figcaption>making things</figcaption>
+          </figure>
+          <figure class="life-item life-item--wide">
+            <img src="assets/placeholders/life-landscape.svg" alt="Lifestyle photo placeholder">
+            <figcaption>somewhere new</figcaption>
+          </figure>
+          <figure class="life-item life-item--portrait">
+            <img src="assets/placeholders/life-portrait.svg" alt="Lifestyle photo placeholder">
+            <figcaption>currently listening to...</figcaption>
+          </figure>
+          <figure class="life-item life-item--square">
+            <img src="assets/placeholders/life-square.svg" alt="Lifestyle photo placeholder">
+            <figcaption>little moments</figcaption>
+          </figure>
+          <figure class="life-item life-item--wide">
+            <img src="assets/placeholders/life-landscape.svg" alt="Lifestyle photo placeholder">
+            <figcaption>weekend walks</figcaption>
+          </figure>
+        </div>
+        </div>
+      </div>
     </div>
   </section>
   <img src="assets/IMG_3093.PNG" alt="Decorative Between Projects and Contact" class="between-project-contact-img" />
-  <section class="contact animate">
+  <section id="contact" class="contact animate">
     <h2 class="metallic-shine">Contact</h2>
     <form action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="0fcf58cb-fc0c-4947-9329-b227e8d7d53e">
@@ -65,6 +140,6 @@
     </form>
   </section>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>

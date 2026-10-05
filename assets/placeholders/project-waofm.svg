@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Project image placeholder">
+  <rect width="800" height="500" fill="#141414"/>
+  <rect x="28" y="28" width="744" height="444" rx="18" fill="#1c1c1c" stroke="#f1c6dc" stroke-opacity="0.4" stroke-width="2"/>
+  <rect x="250" y="160" width="28" height="110" fill="#f1c6dc" opacity="0.7"/>
+  <rect x="300" y="130" width="28" height="140" fill="#eee" opacity="0.35"/>
+  <rect x="350" y="180" width="28" height="90" fill="#f1c6dc" opacity="0.5"/>
+  <rect x="400" y="145" width="28" height="125" fill="#eee" opacity="0.45"/>
+  <rect x="450" y="170" width="28" height="100" fill="#f1c6dc" opacity="0.65"/>
+  <rect x="500" y="155" width="28" height="115" fill="#eee" opacity="0.3"/>
+  <text x="400" y="330" text-anchor="middle" fill="#f1c6dc" font-family="Arial, sans-serif" font-size="26">Image Placeholder</text>
+  <text x="400" y="368" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="16">WAOFM Tableau Project</text>
+</svg>

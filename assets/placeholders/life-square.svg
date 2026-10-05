@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-label="Lifestyle photo placeholder">
+  <rect width="400" height="400" fill="#1a1a1a"/>
+  <rect x="10" y="10" width="380" height="380" fill="none" stroke="#f1c6dc" stroke-opacity="0.22"/>
+  <text x="200" y="208" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="15">photo</text>
+</svg>
