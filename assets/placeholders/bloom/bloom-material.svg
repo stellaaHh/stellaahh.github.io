@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-label="bloom-material placeholder">
+  <rect width="1400" height="700" fill="#141414"/>
+  <rect x="12" y="12" width="1376" height="676" rx="18" fill="#1c1c1c" stroke="#f1c6dc" stroke-opacity="0.28" stroke-width="1.5"/>
+  <circle cx="700.0" cy="350.0" r="28" fill="none" stroke="#c9c9c9" stroke-opacity="0.35" stroke-width="1.5"/>
+</svg>
