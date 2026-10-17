@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cooking Coordination Project | Stella's Portfolio</title>
-  <link rel="stylesheet" href="../style.css?v=4" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <title>HusCooks | Stella's Portfolio</title>
+  <link rel="stylesheet" href="../style.css?v=47" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bloom-page husk-page">
   <header class="site-header">
     <nav class="site-nav" aria-label="Page">
       <a href="../index.html#project">Work</a>
@@ -16,41 +16,288 @@
     </nav>
   </header>
 
-  <main class="project-detail">
-    <a href="../index.html#project" class="back-projects">← Back to Projects</a>
-    <h1 class="metallic-shine">Cooking Coordination Project</h1>
-    <p class="detail-tagline">Interaction design · Placeholder project page</p>
-    <img class="detail-hero" src="../assets/placeholders/project-cooking.svg" alt="Cooking Coordination Project image placeholder">
+  <main class="bloom">
+    <img src="../assets/IMG_3093.PNG" alt="" class="bloom-wave">
+    <a href="../index.html#project" class="back-projects bloom-back">← Back to Work</a>
 
-    <section class="detail-block">
-      <h2>Project Overview</h2>
-      <p>Placeholder: This project explores how UW students living off-campus can coordinate cooking with roommates in a more organized and motivating way.</p>
-    </section>
-    <section class="detail-block">
-      <h2>My Role</h2>
-      <p>Placeholder: Designer and researcher contributing to interviews, synthesis, interaction design, and prototype iteration.</p>
-    </section>
-    <section class="detail-block">
-      <h2>Design Process</h2>
-      <p>Placeholder: We moved from user research to opportunity framing, concept sketches, wireframes, and a high-fidelity prototype.</p>
-    </section>
-    <section class="detail-block">
-      <h2>Research</h2>
-      <p>Placeholder: Research focused on conflicting schedules, food preferences, and the social side of cooking together.</p>
-    </section>
-    <section class="detail-block">
-      <h2>Images</h2>
-      <div class="detail-gallery">
-        <img src="../assets/placeholders/project-cooking.svg" alt="Prototype image placeholder">
-        <img src="../assets/placeholders/project-cooking.svg" alt="Process image placeholder">
+    <section class="bloom-grid bloom-overview" id="overview" aria-labelledby="husk-title">
+      <div class="bloom-span-8">
+        <div class="husk-heading">
+          <p class="bloom-section-num">01</p>
+          <h1 id="husk-title" class="metallic-shine bloom-project-title">HusCooks</h1>
+        </div>
+        <p class="bloom-subsection-title bloom-hero-sub">Making shared cooking easier to coordinate.</p>
+        <div class="bloom-body husk-lead">
+          <p>HusCooks is a mobile app concept designed to help UW students plan meals and cook with their roommates. From finding a time that works for everyone to dividing cooking tasks and reflecting afterward, the app brings different parts of shared cooking into one place.</p>
+        </div>
+      </div>
+
+      <div class="husk-hero bloom-span-12" aria-label="HusCooks high-fidelity screens">
+        <figure class="husk-hero-screen husk-hero-screen--left">
+          <img src="../assets/huscooks/groups.png" alt="Groups screen listing upcoming cooking sessions, including a pending TBD plan and a confirmed Italian Pasta Night.">
+        </figure>
+        <figure class="husk-hero-screen husk-hero-screen--center">
+          <img src="../assets/huscooks/home.png" alt="Home screen greeting Huskies, with today's TBD group, dietary tags, and quick actions for recipes and tasks.">
+        </figure>
+        <figure class="husk-hero-screen husk-hero-screen--right">
+          <img src="../assets/huscooks/reflection.png" alt="Reflection screen with mood history shown as food photos, dates, and emoji mood indicators.">
+        </figure>
+      </div>
+
+      <div class="husk-facts bloom-span-12">
+        <dl class="bloom-meta">
+          <div>
+            <dt class="bloom-small-label">Role</dt>
+            <dd class="bloom-body">UX Research &amp; Product Design</dd>
+          </div>
+          <div>
+            <dt class="bloom-small-label">Timeline</dt>
+            <dd class="bloom-body">September 2025 – March 2026</dd>
+          </div>
+          <div>
+            <dt class="bloom-small-label">Type</dt>
+            <dd class="bloom-body">UX Research &amp; Digital Product Design</dd>
+          </div>
+          <div>
+            <dt class="bloom-small-label">Methods</dt>
+            <dd class="bloom-body">Interviews · Research Synthesis · Figma Prototyping · Usability Testing</dd>
+          </div>
+        </dl>
+        <div class="bloom-contrib">
+          <h3 class="bloom-small-label">My contribution</h3>
+          <p class="bloom-body">I contributed throughout HusCooks’ design process, from user interviews and research synthesis to concept development, Figma prototyping, usability testing, and iteration. I independently illustrated the Cooking Coordination App storyboard and designed the Reflection interface, while collaborating with the team on research, testing, and broader product decisions.</p>
+        </div>
       </div>
     </section>
-    <section class="detail-block">
-      <h2>Final Outcomes</h2>
-      <p>Placeholder: The outcome is a coordinated cooking experience that helps roommates plan meals and share tasks more easily.</p>
+
+    <section class="bloom-grid bloom-section" id="problem" aria-labelledby="problem-heading">
+      <div class="bloom-span-8">
+        <div class="husk-heading">
+          <p class="bloom-section-num">02</p>
+          <h2 id="problem-heading" class="bloom-section-title">Why Cooking Together Is Hard</h2>
+        </div>
+      </div>
+      <div class="bloom-body bloom-span-7 husk-lead">
+        <p>We interviewed four UW undergraduates living with roommates to learn about their cooking habits and what made shared meals difficult to organize.</p>
+        <p>A recurring tension emerged: students liked the idea of cooking together, but cooking alone was often easier. Shared meals required coordinating schedules, deciding what to make, and figuring out who would do what.</p>
+      </div>
+
+      <div class="husk-findings-wrap bloom-span-12">
+        <h3 class="bloom-small-label">Research findings</h3>
+        <div class="husk-findings">
+          <div class="husk-finding">
+            <h4 class="bloom-finding-title">Schedules rarely lined up.</h4>
+            <p class="bloom-body">Even when roommates wanted to cook together, finding a time that worked for everyone was difficult.</p>
+          </div>
+          <div class="husk-finding">
+            <h4 class="bloom-finding-title">Convenience shaped decisions.</h4>
+            <p class="bloom-body">Cooking alone often felt simpler than planning a meal with other people.</p>
+          </div>
+          <div class="husk-finding">
+            <h4 class="bloom-finding-title">The social experience mattered.</h4>
+            <p class="bloom-body">Students valued spending time together, but planning and dividing responsibilities could get in the way.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloom-body bloom-span-7">
+        <p>These findings shifted our focus from simply encouraging students to cook together to making shared cooking easier to organize.</p>
+      </div>
+
+      <div class="husk-question bloom-span-7">
+        <h3 class="bloom-small-label">Design question</h3>
+        <blockquote class="bloom-quote">How might we help roommates plan and coordinate shared meals without adding more work to their routines?</blockquote>
+      </div>
     </section>
+
+    <section class="bloom-grid bloom-section" id="exploring" aria-labelledby="explore-heading">
+      <div class="bloom-span-8">
+        <div class="husk-heading">
+          <p class="bloom-section-num">03</p>
+          <h2 id="explore-heading" class="bloom-section-title">Exploring Solutions</h2>
+        </div>
+      </div>
+      <div class="bloom-body bloom-span-7">
+        <p>Before moving into interface design, we explored three approaches: a cooking coordination app, a physical mood board, and an in-person cooking class.</p>
+      </div>
+
+      <div class="husk-boards bloom-span-12">
+        <article class="husk-board">
+          <button type="button" class="husk-zoom" aria-label="Enlarge the Cooking Coordination App storyboard">
+            <img src="../assets/huscooks/storyboard-cooking-app.png" alt="Six-panel storyboard. A student wishes to cook with roommates instead of ordering delivery, discovers HusCooks, saves a recipe, finds a shared time on the calendar, divides tasks with a spinning wheel, and follows a tutorial while cooking together.">
+          </button>
+          <p class="bloom-small-label">Illustrated by me</p>
+          <h3 class="bloom-finding-title">Cooking Coordination App</h3>
+          <p class="bloom-real-caption">I illustrated this storyboard to explore how students could move from discovering the app to planning a meal, coordinating schedules, dividing tasks, and cooking together.</p>
+        </article>
+        <article class="husk-board">
+          <button type="button" class="husk-zoom" aria-label="Enlarge the Physical Mood Board storyboard">
+            <img src="../assets/huscooks/storyboard-mood-board.png" alt="Six-panel storyboard of a physical mood board. Roommates struggle to find a shared time, post their moods on a board, coordinate when both want to cook, cook together, and reflect on the meal afterward.">
+          </button>
+          <p class="bloom-small-label">Alternative concept</p>
+          <h3 class="bloom-finding-title">Physical Mood Board</h3>
+          <p class="bloom-real-caption">A shared physical tool for communicating schedules and readiness to cook.</p>
+        </article>
+        <article class="husk-board">
+          <button type="button" class="husk-zoom" aria-label="Enlarge the In-person Cooking Class storyboard">
+            <img src="../assets/huscooks/storyboard-cooking-class.png" alt="Six-panel storyboard of a cooking class. Roommates struggle to coordinate, join a class about recipes and teamwork, practice assigned roles, talk while cooking, finish a dish together, and feel a greater sense of community.">
+          </button>
+          <p class="bloom-small-label">Alternative concept</p>
+          <h3 class="bloom-finding-title">In-person Cooking Class</h3>
+          <p class="bloom-real-caption">A hands-on approach to practicing cooking, communication, and teamwork.</p>
+        </article>
+      </div>
+
+      <div class="bloom-body bloom-span-7">
+        <p>We moved forward with the app concept because it could support coordination across different schedules and connect the steps before, during, and after cooking.</p>
+      </div>
+    </section>
+
+    <section class="bloom-grid bloom-section" id="testing" aria-labelledby="testing-heading">
+      <div class="bloom-span-8">
+        <div class="husk-heading">
+          <p class="bloom-section-num">04</p>
+          <h2 id="testing-heading" class="bloom-section-title">Designing Through Feedback</h2>
+        </div>
+      </div>
+      <div class="bloom-body bloom-span-7 husk-lead">
+        <p>We developed our ideas through low-fidelity sketches and a mid-fidelity Figma prototype, then used concept testing, usability testing, and expert feedback to guide the high-fidelity design.</p>
+        <p>Two changes became especially important.</p>
+      </div>
+
+      <article class="husk-decision bloom-span-12" id="group-scheduling">
+        <div class="husk-decision-copy">
+          <h3 class="bloom-subsection-title">From Chat to Scheduling</h3>
+          <div class="bloom-body">
+            <p>Our mid-fidelity prototype included a Chat feature to help roommates communicate about cooking plans.</p>
+          </div>
+        </div>
+        <div class="husk-compare">
+          <figure class="husk-pair">
+            <p class="bloom-small-label">Before — Mid-fi Chat</p>
+            <img class="husk-shot" src="../assets/huscooks/midfi-chat.png?v=2" alt="Mid-fidelity Chat screen with a contact list and message previews between roommates.">
+            <figcaption class="bloom-real-caption">A dedicated messaging feature in the mid-fidelity prototype.</figcaption>
+          </figure>
+          <figure class="husk-pair">
+            <p class="bloom-small-label">After — High-fi Groups</p>
+            <img class="husk-shot" src="../assets/huscooks/groups.png" alt="High-fidelity Groups screen for viewing upcoming cooking sessions, participants, and locations.">
+            <figcaption class="bloom-real-caption">Group Scheduling in the final prototype, focused on organizing shared cooking sessions.</figcaption>
+          </figure>
+        </div>
+        <div class="bloom-body">
+          <p>Early feedback raised questions about how visible and accessible Chat should be. But as we reconsidered the feature, we recognized that students already had messaging apps they used regularly.</p>
+          <p>Rather than building another place to chat, we focused on a problem those tools did not directly solve: organizing a shared cooking session.</p>
+          <p>In the high-fidelity prototype, <strong>Group Scheduling replaced Chat</strong>, giving roommates a place to view upcoming sessions, see who was participating, and keep track of their plans.</p>
+          <p>This was an important shift in our design process. Instead of improving every feature we had proposed, we started questioning whether each one needed to exist.</p>
+        </div>
+      </article>
+
+      <article class="husk-decision bloom-span-12" id="reflection">
+        <div class="husk-decision-copy">
+          <h3 class="bloom-subsection-title">Redesigning Reflection</h3>
+          <div class="bloom-body">
+            <p>I designed the Reflection interface to give roommates a way to record and revisit their experiences after cooking together.</p>
+          </div>
+        </div>
+        <div class="husk-compare">
+          <figure class="husk-pair">
+            <p class="bloom-small-label">Before — Mid-fi Reflection</p>
+            <img class="husk-shot" src="../assets/huscooks/midfi-reflection.png?v=2" alt="Mid-fidelity Reflection screen with Mood History shown as a line chart.">
+            <figcaption class="bloom-real-caption">Mood History was represented as a line chart.</figcaption>
+          </figure>
+          <figure class="husk-pair">
+            <p class="bloom-small-label">After — High-fi Reflection</p>
+            <img class="husk-shot" src="../assets/huscooks/reflection.png" alt="High-fidelity Reflection screen with food photos, dates, and emoji mood indicators.">
+            <figcaption class="bloom-real-caption">Food photos, dates, and emoji-based mood indicators make individual reflections easier to recognize.</figcaption>
+          </figure>
+        </div>
+        <div class="bloom-body">
+          <p>In the mid-fidelity prototype, Mood History was shown as a line chart. However, testing revealed that the mood-history presentation was not clear enough, and later feedback suggested that emojis would be easier to interpret.</p>
+          <p>In the final design, we moved toward a more visual history using food photos, dates, and mood indicators. The interface also provides access to past reflections and reflections shared by others.</p>
+          <p>Working on this feature made me think more carefully about how people read personal information. A chart can show change over time, but it may not be the clearest way to remember how a particular experience felt.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="bloom-grid bloom-section" id="final" aria-labelledby="final-heading">
+      <div class="bloom-span-8">
+        <div class="husk-heading">
+          <p class="bloom-section-num">05</p>
+          <h2 id="final-heading" class="bloom-section-title">The Final Experience</h2>
+        </div>
+      </div>
+      <div class="bloom-body bloom-span-7 husk-lead">
+        <p>Our final high-fidelity prototype connects meal discovery, group coordination, cooking activities, and reflection.</p>
+        <p>The project ended at the prototype stage. While testing helped us improve the interface and reconsider the feature set, we did not measure whether HusCooks changed roommates' cooking habits over time.</p>
+      </div>
+
+      <div class="husk-stage bloom-span-12">
+        <figure class="husk-video">
+          <div class="husk-video-frame">
+            <button type="button" class="husk-video-play" aria-label="Play HusCooks high-fidelity prototype walkthrough">
+              <img src="../assets/huscooks/video-thumb.jpg" alt="">
+              <span class="husk-play-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </figure>
+        <p class="bloom-real-caption">HusCooks high-fidelity prototype walkthrough, presented during our in-class gallery walk.</p>
+        <p class="bloom-body husk-fallback"><a href="https://youtu.be/qp0gaxRrZj8">Watch on YouTube</a></p>
+      </div>
+
+      <div class="husk-takeaway bloom-span-7">
+        <h3 class="bloom-subsection-title">What I Learned</h3>
+        <div class="bloom-body">
+          <p>The biggest lesson I took from HusCooks was that iteration is not always about adding or polishing features.</p>
+          <p>Replacing Chat with Group Scheduling pushed our team to reconsider what problem we were actually solving. Designing Reflection taught me to question whether the way information is displayed matches how people want to use it.</p>
+          <p>If I continued this project, I would test HusCooks with roommate groups over several cooking sessions to see which features fit naturally into their routines and which still create extra work.</p>
+        </div>
+      </div>
+    </section>
+
+    <a class="bloom-next" href="ezgo.html">
+      <span class="bloom-small-label">Next project →</span>
+      <span class="bloom-next-title">EZGo Travel Planner</span>
+    </a>
   </main>
 
-  <script src="../script.js"></script>
+  <dialog id="husk-lightbox" class="husk-lightbox" aria-label="Enlarged storyboard">
+    <div class="husk-lightbox-bar">
+      <form method="dialog">
+        <button type="submit" class="husk-lightbox-close">Close</button>
+      </form>
+    </div>
+    <img id="husk-lightbox-img" alt="">
+  </dialog>
+
+  <script>
+    const lightbox = document.getElementById('husk-lightbox');
+    const lightboxImg = document.getElementById('husk-lightbox-img');
+
+    document.querySelectorAll('.husk-zoom').forEach((button) => {
+      button.addEventListener('click', () => {
+        const img = button.querySelector('img');
+        lightboxImg.src = img.getAttribute('src');
+        lightboxImg.alt = img.alt;
+        lightbox.showModal();
+      });
+    });
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) lightbox.close();
+    });
+
+    const playButton = document.querySelector('.husk-video-play');
+    playButton.addEventListener('click', () => {
+      const frame = playButton.closest('.husk-video-frame');
+      const iframe = document.createElement('iframe');
+      iframe.className = 'husk-video-iframe';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/qp0gaxRrZj8?autoplay=1&rel=0';
+      iframe.title = 'HusCooks high-fidelity prototype walkthrough';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      frame.replaceChildren(iframe);
+    });
+  </script>
 </body>
 </html>
