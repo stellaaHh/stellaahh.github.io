@@ -201,9 +201,10 @@ section {
 
 .projects .project-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.4rem 2rem;
-  max-width: 860px;
+  grid-template-columns: repeat(2, minmax(0, 414px));
+  justify-content: center;
+  gap: 3.2rem 2.8rem;
+  max-width: 873px;
   margin: 0 auto;
 }
 
@@ -222,19 +223,39 @@ section {
 }
 
 .project-thumb {
+  position: relative;
   display: block;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(255,255,255,0.08);
   transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.project-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.98) 0%, rgba(10, 10, 10, 0.82) 16%, rgba(10, 10, 10, 0.6) 32%, rgba(10, 10, 10, 0.3) 52%, rgba(10, 10, 10, 0.12) 70%, rgba(10, 10, 10, 0.03) 84%, transparent 100%);
+  pointer-events: none;
 }
 
 .project-thumb img {
   display: block;
   width: 100%;
+  height: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  object-position: center;
+  opacity: 0.72;
+}
+
+.project-card--farestart .project-thumb img {
+  object-position: center top;
+  opacity: 1;
+  filter: none;
 }
 
 .project-title {
@@ -516,6 +537,7 @@ button {
 
 .projects.animate {
   position: relative;
+  z-index: 1;
 }
 
 
@@ -2126,4 +2148,645 @@ button[type='submit']:focus {
   .site-nav a {
     font-size: 0.78rem;
   }
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 28px;
+  width: min(100%, 820px);
+  margin-inline: auto;
+  text-align: left;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet.bloom-section {
+  margin-top: 96px;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet .husk-heading,
+.bloom-page:not(.husk-page) .bloom-sheet figure {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-project-title,
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-section-title,
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-subsection-title {
+  margin-bottom: 0;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-hero-sub {
+  max-width: none;
+  margin: 0;
+  text-align: left;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-body,
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-real-caption,
+.bloom-page:not(.husk-page) .bloom-sheet .husk-facts {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-media--hero,
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-media--explore {
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-media--hero,
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-frame {
+  aspect-ratio: 16 / 9;
+}
+
+.bloom-page:not(.husk-page) .bloom-trio,
+.bloom-page:not(.husk-page) .bloom-pair {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+
+.bloom-page:not(.husk-page) .bloom-trio {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.bloom-page:not(.husk-page) .bloom-pair {
+  grid-template-columns: 1fr 1fr;
+}
+
+.bloom-page:not(.husk-page) .bloom-concept h3 {
+  margin: 12px 0 8px;
+}
+
+.bloom-page:not(.husk-page) .bloom-concept .bloom-body {
+  margin: 0;
+}
+
+.bloom-page:not(.husk-page) .bloom-closer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 8px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.bloom-page:not(.husk-page) .bloom-closer .bloom-mode-label {
+  margin-bottom: 8px;
+}
+
+.bloom-page:not(.husk-page) .bloom-modes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.bloom-page:not(.husk-page) .bloom-mode {
+  margin: 0;
+  padding: 20px 0 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.bloom-page:not(.husk-page) .bloom-mode .bloom-subsection-title {
+  margin-bottom: 8px;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-real-caption {
+  margin-top: 8px;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-findings {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet .bloom-video-fallback {
+  margin-top: -12px;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet a {
+  color: #f1c6dc;
+  text-underline-offset: 0.16em;
+}
+
+.bloom-page:not(.husk-page) .bloom-sheet a:hover,
+.bloom-page:not(.husk-page) .bloom-sheet a:focus-visible {
+  color: #fff;
+}
+
+.bloom-page:not(.husk-page) .bloom-next {
+  width: min(100%, 820px);
+}
+
+@media (max-width: 700px) {
+  .bloom-page:not(.husk-page) .bloom-sheet.bloom-section {
+    margin-top: 72px;
+  }
+
+  .bloom-page:not(.husk-page) .bloom-trio,
+  .bloom-page:not(.husk-page) .bloom-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bloom-page:not(.husk-page) .bloom-demo {
+  grid-column: 1 / -1;
+  width: min(100%, 850px);
+  margin-inline: auto;
+  justify-self: center;
+}
+
+.bloom-page:not(.husk-page) .bloom-demo .bloom-real-caption,
+.bloom-page:not(.husk-page) .bloom-demo .bloom-video-fallback {
+  max-width: none;
+  margin-inline: 0;
+  text-align: left;
+}
+
+.bloom-page:not(.husk-page) .bloom-video-fallback {
+  margin-top: 12px;
+}
+
+.bloom-page:not(.husk-page) .bloom-demo a {
+  color: #f1c6dc;
+  text-underline-offset: 0.16em;
+}
+
+.bloom-page:not(.husk-page) .bloom-demo a:hover,
+.bloom-page:not(.husk-page) .bloom-demo a:focus-visible {
+  color: #fff;
+}
+
+/* HusCooks: same 820px left edge as Bloom. Artifact rows stay multi-column. */
+.husk-page .husk-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 28px;
+  width: min(100%, 820px);
+  margin-inline: auto;
+  text-align: left;
+}
+
+.husk-page .husk-section.bloom-section {
+  margin-top: 96px;
+}
+
+.husk-page .husk-section .husk-heading,
+.husk-page .husk-section .husk-facts,
+.husk-page .husk-section .husk-findings-wrap,
+.husk-page .husk-section .husk-boards,
+.husk-page .husk-section .husk-decision,
+.husk-page .husk-section .husk-stage,
+.husk-page .husk-section .husk-question,
+.husk-page .husk-section .husk-takeaway,
+.husk-page .husk-section .bloom-body,
+.husk-page .husk-section .husk-hero {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+.husk-page .husk-section .husk-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.husk-page .husk-section .bloom-section-num,
+.husk-page .husk-section .bloom-project-title,
+.husk-page .husk-section .bloom-section-title,
+.husk-page .husk-section .bloom-subsection-title,
+.husk-page .husk-section .bloom-hero-sub,
+.husk-page .husk-section .bloom-body,
+.husk-page .husk-section .bloom-body p,
+.husk-page .husk-section .bloom-quote,
+.husk-page .husk-section .bloom-real-caption {
+  max-width: none;
+  margin-inline: 0;
+  text-align: left;
+  text-wrap: wrap;
+}
+
+.husk-page .husk-section .bloom-section-num {
+  margin: 0 0 12px;
+}
+
+.husk-page .husk-section .bloom-project-title,
+.husk-page .husk-section .bloom-section-title,
+.husk-page .husk-section .bloom-hero-sub {
+  margin: 0;
+}
+
+.husk-page .husk-section .husk-decision .bloom-subsection-title {
+  margin: 0 0 12px;
+}
+
+.husk-page .husk-section .husk-decision .bloom-small-label,
+.husk-page .husk-section .husk-takeaway .bloom-subsection-title {
+  margin-bottom: 8px;
+}
+
+.husk-page .husk-section .husk-findings {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.husk-page .husk-section .husk-boards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.husk-page .husk-section .husk-board .husk-zoom,
+.husk-page .husk-section .husk-board .bloom-small-label,
+.husk-page .husk-section .husk-board .bloom-finding-title,
+.husk-page .husk-section .husk-board .bloom-real-caption {
+  width: 100%;
+  max-width: none;
+}
+
+.husk-page .husk-section .husk-decision {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 22px;
+  margin-top: 8px;
+}
+
+.husk-page .husk-section .husk-decision + .husk-decision {
+  margin-top: 56px;
+}
+
+.husk-page .husk-section .husk-decision-copy,
+.husk-page .husk-section .husk-decision > .bloom-body,
+.husk-page .husk-section .husk-takeaway {
+  width: 100%;
+  max-width: none;
+}
+
+.husk-page .husk-section .husk-compare {
+  display: grid;
+  grid-template-columns: 268px 268px;
+  gap: 20px;
+  align-items: start;
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+  justify-content: center;
+  justify-items: center;
+}
+
+.husk-page .husk-section .husk-pair {
+  align-items: center;
+  width: 268px;
+  margin: 0;
+}
+
+.husk-page .husk-section .husk-pair .bloom-small-label,
+.husk-page .husk-section .husk-pair .bloom-real-caption {
+  width: 100%;
+  max-width: none;
+  text-align: center;
+}
+
+.husk-page .husk-section .husk-shot {
+  width: min(100%, 268px);
+  height: auto;
+  aspect-ratio: 430 / 932;
+  object-fit: contain;
+  object-position: center top;
+}
+
+.husk-page .husk-section .husk-stage {
+  width: 100%;
+  margin: 0;
+}
+
+.husk-page .bloom-next {
+  width: min(100%, 820px);
+}
+
+@media (max-width: 700px) {
+  .husk-page .husk-section.bloom-section {
+    margin-top: 72px;
+  }
+
+  .husk-page .husk-section .husk-findings,
+  .husk-page .husk-section .husk-compare,
+  .husk-page .husk-section .husk-boards {
+    grid-template-columns: 1fr;
+  }
+
+  .husk-page .husk-section .husk-compare {
+    justify-items: center;
+  }
+
+  .husk-page .husk-section .husk-boards {
+    width: min(100%, 420px);
+    margin-inline: auto;
+  }
+
+  .husk-page .husk-section .husk-shot,
+  .husk-page .husk-section .husk-pair .bloom-small-label,
+  .husk-page .husk-section .husk-pair .bloom-real-caption {
+    width: min(100%, 260px);
+    max-width: 260px;
+  }
+}
+
+.bloom-page:not(.husk-page) .bloom-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--bloom-radius);
+  background: #141414;
+  box-shadow: 0 0 0 1px rgba(241, 198, 220, 0.16), 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.bloom-page:not(.husk-page) .bloom-play {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: #f6f6f6;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.bloom-page:not(.husk-page) .bloom-play:hover,
+.bloom-page:not(.husk-page) .bloom-play:focus-visible {
+  color: #fff;
+}
+
+.bloom-page:not(.husk-page) .bloom-play:focus-visible {
+  outline: 2px solid #f1c6dc;
+  outline-offset: -6px;
+}
+
+.bloom-page:not(.husk-page) .bloom-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bloom-page:not(.husk-page) .bloom-play-icon {
+  z-index: 1;
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: rgba(10, 10, 10, 0.72);
+}
+
+.bloom-page:not(.husk-page) .bloom-play-icon::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 20px;
+  border-style: solid;
+  border-width: 15px 0 15px 24px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.bloom-page:not(.husk-page) .bloom-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* FareStart uses Bloom's .bloom-sheet grid, typography, and responsive spacing.
+   Only artifact proportions and nested content groups need page-specific rules. */
+.farestart-page .farestart-section {
+  --farestart-group-gap: 28px; /* Bloom sheet gap */
+  --farestart-detail-gap: 16px; /* Bloom pair/trio gap */
+}
+
+.farestart-page .farestart-section img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.farestart-page .farestart-hero-image img,
+.farestart-page .farestart-photo-block img,
+.farestart-page .farestart-hat-layout img {
+  border-radius: var(--bloom-radius);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.farestart-page .farestart-hero-image img {
+  box-shadow: 0 0 0 1px rgba(241, 198, 220, 0.16), 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.farestart-page .farestart-logo-grid,
+.farestart-page .farestart-palette,
+.farestart-page .farestart-type {
+  display: grid;
+  gap: var(--farestart-detail-gap);
+  align-items: start;
+}
+
+.farestart-page .farestart-logo-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.farestart-page .farestart-identity-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--farestart-detail-gap);
+}
+
+.farestart-page .farestart-identity-group + .farestart-identity-group {
+  padding-top: var(--farestart-group-gap);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.farestart-page .farestart-identity-label,
+.farestart-page .farestart-type-role {
+  margin: 0;
+  font-family: Inter, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.farestart-page .farestart-identity-label {
+  font-weight: 500;
+  color: #eee;
+}
+
+.farestart-page .farestart-type-role {
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.farestart-page .farestart-logo-card img {
+  box-sizing: border-box;
+  height: 120px;
+  padding: 16px;
+  object-fit: contain;
+  border-radius: var(--bloom-radius);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.farestart-page .farestart-palette {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.farestart-page .farestart-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: Inter, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.farestart-page .farestart-hex {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.farestart-page .farestart-color {
+  display: block;
+  height: 48px;
+  margin-bottom: 4px;
+  border-radius: 8px;
+}
+
+.farestart-page .farestart-type {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.farestart-page .farestart-type-sample {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #eee;
+}
+
+.farestart-page .farestart-type-sample--heading {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.farestart-page .farestart-type-sample--body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.farestart-page .farestart-part {
+  display: flex;
+  flex-direction: column;
+  gap: var(--farestart-group-gap);
+  min-width: 0;
+}
+
+.farestart-page .farestart-part-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Bloom concept heading-to-body spacing */
+}
+
+.farestart-page .farestart-part + .farestart-part {
+  margin-top: 28px; /* 56px between artifact groups, including the sheet gap */
+}
+
+.farestart-page .farestart-section figure.farestart-photo-block--sketch {
+  width: min(100%, 720px);
+  align-self: center;
+}
+
+.farestart-page .farestart-photo-block--sketch > a {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--bloom-radius);
+  background-color: #fff;
+}
+
+.farestart-page .farestart-photo-block--sketch img {
+  width: min(100%, 560px);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.farestart-page .farestart-hat-layout {
+  --farestart-hat-height: 240px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--farestart-detail-gap);
+  width: min(100%, calc(var(--farestart-hat-height) * 939 / 610 * 2 + 16px));
+  align-self: center;
+  align-items: start;
+}
+
+.farestart-page .farestart-section figure.farestart-hat-secondary,
+.farestart-page .farestart-section figure.farestart-hat-main {
+  width: 100%;
+  max-width: 100%;
+}
+
+.farestart-page .farestart-hat-layout img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 939 / 610;
+  object-fit: contain;
+}
+
+.farestart-page .farestart-hat-layout .bloom-real-caption {
+  text-align: center;
+}
+
+.farestart-page .farestart-hat-secondary img {
+  background-color: #fff;
+}
+
+.farestart-page .farestart-attribute {
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .farestart-page .farestart-logo-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .farestart-page .farestart-logo-card img {
+    height: 100px;
+  }
+
+  .farestart-page .farestart-palette {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .farestart-page .farestart-hat-layout {
+    --farestart-hat-height: 200px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--farestart-group-gap);
+    width: min(100%, calc(var(--farestart-hat-height) * 939 / 610));
+  }
+
 }
