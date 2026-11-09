@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Starter | Stella's Portfolio</title>
+  <meta name="description" content="Creative Starter is an HCDE 310 web application connecting Spotify listening history and user-selected moods with artwork discovery. A case study in interaction design and web development by Stella Huang." />
+  <link rel="stylesheet" href="../style.css?v=92" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bloom-page creative-starter-page">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Page">
+      <a href="../index.html#project">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="bloom">
+    <img src="../assets/IMG_3093.PNG" alt="" class="bloom-wave" />
+    <a href="../index.html#project" class="back-projects bloom-back">&#8592; Back to Work</a>
+
+    <section class="bloom-sheet bloom-overview" id="overview" aria-labelledby="creative-title">
+      <div class="husk-heading">
+        <h1 id="creative-title" class="metallic-shine bloom-project-title">Creative Starter</h1>
+      </div>
+      <p class="bloom-subsection-title bloom-hero-sub">Exploring art through music and mood</p>
+
+      <div class="husk-heading">
+        <p class="bloom-section-num">01</p>
+        <h2 class="bloom-section-title">Project Overview</h2>
+      </div>
+
+      <div class="creative-starter-copy">
+        <h3 class="bloom-subsection-title">Starting with a Song</h3>
+        <div class="bloom-body">
+          <p>I often listen to music when I am drawing or looking for ideas, especially when I do not know where to start. For my HCDE 310 final project, I wanted to see whether music could become a way to discover visual references.</p>
+          <p>I built Creative Starter, a Flask web application that connects Spotify's recently played tracks with artworks from the Art Institute of Chicago. Users choose a song, select a mood, and browse a small collection of artworks related to that mood. The idea was to give people a starting point for exploring art without needing to know what to search for.</p>
+        </div>
+      </div>
+
+      <figure class="creative-starter-shot">
+        <a class="creative-starter-zoom" href="../assets/creative-starter/login-screen.png" data-screenshot aria-label="Enlarge the Creative Starter login screen">
+          <img src="../assets/creative-starter/login-screen.png" width="1291" height="673" alt="Creative Starter's purple gradient welcome screen with the title, a short introduction, and a Login with Spotify button." />
+        </a>
+        <figcaption class="bloom-real-caption">Spotify sign-in is the starting point for Creative Starter.</figcaption>
+      </figure>
+
+      <div class="husk-facts">
+        <dl class="bloom-meta">
+          <div>
+            <dt class="bloom-small-label">Project Type</dt>
+            <dd class="bloom-body">Interactive Web Application</dd>
+          </div>
+          <div>
+            <dt class="bloom-small-label">Context</dt>
+            <dd class="bloom-body">HCDE 310 &#183; Programming for HCDE</dd>
+          </div>
+          <div>
+            <dt class="bloom-small-label">Role</dt>
+            <dd class="bloom-body">Concept Development, Interaction Design, Web Development</dd>
+          </div>
+          <div>
+            <dt class="bloom-small-label">Tools</dt>
+            <dd class="bloom-body">Python, Flask, Spotify Web API, Art Institute of Chicago API</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="bloom-sheet bloom-section" id="discovery-flow" aria-labelledby="discovery-heading">
+      <div class="husk-heading">
+        <p class="bloom-section-num">02</p>
+        <h2 id="discovery-heading" class="bloom-section-title">Designing the Discovery Flow</h2>
+      </div>
+      <div class="creative-starter-copy">
+        <h3 class="bloom-subsection-title">Choosing a Song and a Mood</h3>
+        <div class="bloom-body">
+          <p>The application begins with Spotify login, followed by a page showing recently played tracks. I kept the song cards and five mood options on the same screen because I wanted users to make those choices together.</p>
+          <p>The mood is selected manually rather than inferred from the song. Someone might choose a calm song but still want to look at energetic artwork, so I did not want the music to determine the results entirely.</p>
+          <p>On the results page, I kept the chosen song and mood in the corner while the artworks take up most of the screen. Each artwork includes its title and artist when that information is available.</p>
+        </div>
+      </div>
+
+      <figure class="creative-starter-shot">
+        <a class="creative-starter-zoom" href="../assets/creative-starter/song-mood-selection.png" data-screenshot aria-label="Enlarge the track and mood selection screen">
+          <img src="../assets/creative-starter/song-mood-selection.png" width="1293" height="670" alt="Recent tracks with album covers and a selected song, five mood choices with Dreamy selected, and the Find Art button, all visible on one screen." loading="lazy" />
+        </a>
+        <figcaption class="bloom-real-caption">Choosing a recent track and a mood in one place.</figcaption>
+      </figure>
+
+    </section>
+
+    <section class="bloom-sheet bloom-section" id="building" aria-labelledby="building-heading">
+      <div class="husk-heading">
+        <p class="bloom-section-num">03</p>
+        <h2 id="building-heading" class="bloom-section-title">Building the Application</h2>
+      </div>
+      <div class="creative-starter-copy">
+        <h3 class="bloom-subsection-title">Working with Two APIs</h3>
+        <div class="bloom-body">
+          <p>I used Python and Flask to connect Spotify's listening history with the Art Institute of Chicago's collection. After retrieving the recent tracks, the application uses the selected mood to search for artworks through a set of related keywords.</p>
+          <p>For example, the dreamy mood searches for terms such as moon, cloud, and light. I also added basic filtering and ranking so the gallery could display a smaller set of results rather than every artwork returned by the API.</p>
+        </div>
+      </div>
+
+      <ol class="creative-starter-flow" aria-label="Application data flow">
+        <li>Spotify Authentication</li>
+        <li>Recent Tracks</li>
+        <li>Song + Mood Selection</li>
+        <li>Artwork Search</li>
+        <li>Results Gallery</li>
+      </ol>
+
+      <figure class="creative-starter-shot">
+        <a class="creative-starter-zoom" href="../assets/creative-starter/art-matches.png" data-screenshot aria-label="Enlarge the Art Matches gallery">
+          <img src="../assets/creative-starter/art-matches.png" width="1299" height="670" alt="Art Matches gallery showing the selected Kiss'N'You track and Dreamy mood beside four artwork cards from the Art Institute of Chicago." loading="lazy" />
+        </a>
+        <figcaption class="bloom-real-caption">The selected song and mood stay visible alongside the artwork gallery.</figcaption>
+      </figure>
+
+      <div class="creative-starter-copy">
+        <h3 class="bloom-subsection-title">When the APIs Did Not Work as Expected</h3>
+        <div class="bloom-body">
+          <p>Spotify authentication took more time than I anticipated. I ran into access issues while connecting the API and had to revisit how the application handled authorization.</p>
+          <p>The museum API created a different problem. Some searches returned artworks without usable images or complete information, so I added checks before displaying the results.</p>
+          <p>I had originally imagined a closer connection between the music and the artwork. As I worked through the API limitations, I focused on building a smaller experience that I could actually implement and explain.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloom-sheet bloom-section" id="reflection" aria-labelledby="reflection-heading">
+      <div class="husk-heading">
+        <p class="bloom-section-num">04</p>
+        <h2 id="reflection-heading" class="bloom-section-title">Reflection</h2>
+      </div>
+      <div class="creative-starter-copy">
+        <h3 class="bloom-subsection-title">What I Would Change</h3>
+        <div class="bloom-body">
+          <p>Creative Starter was my first experience bringing two external APIs into one web application. I learned more about how Flask routes work and how to handle data that does not always come back in the format I expect.</p>
+          <p>The biggest limitation is the relationship between the song and the artwork. Right now, the selected mood drives the search, while the song mainly provides context. The results can be interesting, but they are not necessarily connected to the music itself.</p>
+          <p>If I continued the project, I would want to explore whether musical characteristics could play a larger role in the search. I would also be interested in seeing what people actually do with the artworks they discover, especially whether the results help them begin a drawing or another creative task.</p>
+        </div>
+      </div>
+
+      <figure class="creative-starter-video">
+        <div class="bloom-frame">
+          <button type="button" class="bloom-play" id="creative-play" aria-label="Play the Creative Starter walkthrough">
+            <img class="bloom-poster" src="../assets/creative-starter/login-screen.png" alt="" />
+            <span class="bloom-play-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <figcaption class="bloom-real-caption">Creative Starter walkthrough &mdash; from Spotify login to artwork discovery.</figcaption>
+        <p class="bloom-body bloom-video-fallback"><a href="https://www.youtube.com/watch?v=WlZvVNQDLpQ">Watch on YouTube</a></p>
+      </figure>
+    </section>
+
+    <a class="bloom-next" href="../bloom/">
+      <span class="bloom-small-label">Next project &#8594;</span>
+      <span class="bloom-next-title">Bloom</span>
+    </a>
+  </main>
+
+  <dialog id="creative-lightbox" class="husk-lightbox" aria-label="Enlarged Creative Starter screenshot">
+    <div class="husk-lightbox-bar">
+      <form method="dialog">
+        <button type="submit" class="husk-lightbox-close">Close</button>
+      </form>
+    </div>
+    <img id="creative-lightbox-image" alt="" />
+  </dialog>
+
+  <script>
+    const lightbox = document.getElementById('creative-lightbox');
+    const lightboxImage = document.getElementById('creative-lightbox-image');
+    let screenshotOpener;
+
+    document.querySelectorAll('[data-screenshot]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        const img = link.querySelector('img');
+        lightboxImage.src = img.getAttribute('src');
+        lightboxImage.alt = img.alt;
+        screenshotOpener = link;
+        lightbox.showModal();
+      });
+    });
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target !== lightbox) return;
+      const bounds = lightbox.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right ||
+          event.clientY < bounds.top || event.clientY > bounds.bottom) {
+        lightbox.close();
+      }
+    });
+    lightbox.addEventListener('close', () => screenshotOpener?.focus({ preventScroll: true }));
+
+    const creativePlay = document.getElementById('creative-play');
+    creativePlay.addEventListener('click', () => {
+      const frame = creativePlay.closest('.bloom-frame');
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/WlZvVNQDLpQ?rel=0';
+      iframe.title = 'Creative Starter walkthrough';
+      iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      frame.replaceChildren(iframe);
+    });
+  </script>
+</body>
+</html>

@@ -209,7 +209,8 @@ section {
 }
 
 .project-card {
-  background: #1c1c1c;
+  position: relative;
+  background: rgba(28, 28, 28, 0.55);
   padding: 0.9rem 0.9rem 1.2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255,255,255,0.1);
@@ -220,6 +221,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1);
 }
 
 .project-thumb {
@@ -229,7 +231,6 @@ section {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(255,255,255,0.08);
-  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1);
   max-width: 90%;
   margin: 0 auto;
 }
@@ -256,6 +257,14 @@ section {
   object-position: center top;
   opacity: 1;
   filter: none;
+}
+
+.project-card--creative-starter .project-thumb img {
+  opacity: 1;
+}
+
+.project-card--creative-starter .project-thumb::after {
+  content: none;
 }
 
 .project-title {
@@ -686,26 +695,22 @@ button[type='submit']:focus {
   animation: none;
 }
 
-@keyframes projectCardPulse {
-  0% {
-    box-shadow: 0 0 0px #f1c6dc, 0 0 0px #fff;
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: 0 0 16px #f1c6dc, 0 0 24px #fff;
-    transform: scale(1.04);
-  }
-  100% {
-    box-shadow: 0 0 0px #f1c6dc, 0 0 0px #fff;
-    transform: scale(1);
-  }
-}
-
-.project-thumb:hover,
-.project-thumb:focus-within {
+.project-card:hover,
+.project-card:focus-visible {
   transform: scale(1.08);
   z-index: 1;
-  animation: projectCardPulse 1.2s cubic-bezier(.4,2,.6,1);
+  box-shadow: 0 0 16px rgba(241, 198, 220, 0.6), 0 0 24px rgba(255, 255, 255, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: none;
+  }
+
+  .project-card:hover,
+  .project-card:focus-visible {
+    transform: none;
+  }
 }
 
 .project-detail {
@@ -2767,6 +2772,102 @@ button[type='submit']:focus {
 
 .farestart-page .farestart-attribute {
   font-style: italic;
+}
+
+/* Creative Starter: Bloom's sheet, type scale, captions, and video component. */
+.creative-starter-page .bloom-project-title {
+  font-size: clamp(24px, calc(9vw - 6px), 72px);
+  white-space: nowrap;
+}
+
+.creative-starter-page .creative-starter-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.creative-starter-page .creative-starter-zoom {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--bloom-radius);
+  cursor: zoom-in;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.creative-starter-page .creative-starter-zoom:focus-visible {
+  outline: 2px solid #f1c6dc;
+  outline-offset: 3px;
+}
+
+.creative-starter-page .creative-starter-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.creative-starter-page .bloom-sheet .creative-starter-video .bloom-video-fallback {
+  margin: 12px 0 0;
+}
+
+.creative-starter-page .creative-starter-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Inter, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d8d8d8;
+}
+
+.creative-starter-page .creative-starter-flow li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.creative-starter-page .creative-starter-flow li + li::before {
+  content: "\2192";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.creative-starter-page .husk-lightbox {
+  box-sizing: border-box;
+}
+
+.creative-starter-page .husk-lightbox-close {
+  margin: 0;
+  padding: 0.45rem 0.85rem;
+  border: 0;
+  border-radius: 8px;
+  background: #f1c6dc;
+  color: #0a0a0a;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .creative-starter-page .creative-starter-flow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .creative-starter-page .creative-starter-flow li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .creative-starter-page .creative-starter-flow li + li::before {
+    content: "\2193";
+  }
 }
 
 @media (max-width: 700px) {
