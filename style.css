@@ -260,11 +260,7 @@ section {
 }
 
 .project-card--creative-starter .project-thumb img {
-  opacity: 1;
-}
-
-.project-card--creative-starter .project-thumb::after {
-  content: none;
+  opacity: 0.8;
 }
 
 .project-title {
@@ -2776,8 +2772,7 @@ button[type='submit']:focus {
 
 /* Creative Starter: Bloom's sheet, type scale, captions, and video component. */
 .creative-starter-page .bloom-project-title {
-  font-size: clamp(24px, calc(9vw - 6px), 72px);
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .creative-starter-page .creative-starter-copy {
@@ -2788,10 +2783,7 @@ button[type='submit']:focus {
 
 .creative-starter-page .creative-starter-zoom {
   display: block;
-  overflow: hidden;
-  border-radius: var(--bloom-radius);
   cursor: zoom-in;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .creative-starter-page .creative-starter-zoom:focus-visible {
@@ -2802,7 +2794,8 @@ button[type='submit']:focus {
 .creative-starter-page .creative-starter-shot img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 .creative-starter-page .bloom-sheet .creative-starter-video .bloom-video-fallback {
@@ -2817,10 +2810,6 @@ button[type='submit']:focus {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: Inter, "Segoe UI", sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #d8d8d8;
 }
 
 .creative-starter-page .creative-starter-flow li {
