@@ -456,6 +456,20 @@ button {
   letter-spacing: 0.09em;
 }
 
+.contact-social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  width: min(100%, 400px);
+  margin: 1.25rem auto 0;
+}
+
+.contact-social-links .resume-text {
+  margin-top: 0;
+  font-size: 0.72rem;
+}
+
 .projects {
   padding: 2.6rem 2rem 4rem;
 }
@@ -776,9 +790,11 @@ button[type='submit']:focus {
   border: none;
   box-shadow: none;
   color: #eee;
-  font-size: 0.72rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  line-height: 1.2;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   text-decoration: none;
   cursor: pointer;
 }
