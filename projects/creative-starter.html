@@ -28,11 +28,15 @@
       </div>
       <p class="bloom-subsection-title bloom-hero-sub">Exploring art through music and mood</p>
 
+      <div class="husk-heading">
+        <h2 class="bloom-section-title">Project Overview</h2>
+      </div>
+
       <div class="creative-starter-copy">
         <h3 class="bloom-subsection-title">Starting with a Song</h3>
         <div class="bloom-body">
-          <p>I often listen to music when I am drawing or looking for ideas, especially when I do not know where to start. For my HCDE 310 final project, I wanted to see whether music could become a way to discover visual references.</p>
-          <p>I built Creative Starter, a Flask web application that connects Spotify's recently played tracks with artworks from the Art Institute of Chicago. Users choose a song, select a mood, and browse a small collection of artworks related to that mood. The idea was to give people a starting point for exploring art without needing to know what to search for.</p>
+          <p>I often turn to music when I'm drawing or looking for ideas. For my HCDE 310 final project, I wanted to explore whether music could also help me discover visual inspiration.</p>
+          <p>I built Creative Starter, a web application that connects Spotify's recently played tracks with the Art Institute of Chicago's collection. Users select a song and a mood, then browse artworks related to that mood.</p>
         </div>
       </div>
 
@@ -68,14 +72,13 @@
     <section class="bloom-sheet bloom-section" id="discovery-flow" aria-labelledby="discovery-heading">
       <div class="husk-heading">
         <p class="bloom-section-num">02</p>
-        <h2 id="discovery-heading" class="bloom-section-title">Designing the Discovery Flow</h2>
+        <h2 id="discovery-heading" class="bloom-section-title">Design &amp; Development</h2>
       </div>
       <div class="creative-starter-copy">
-        <h3 class="bloom-subsection-title">Choosing a Song and a Mood</h3>
+        <h3 class="bloom-subsection-title">From Music to Art</h3>
         <div class="bloom-body">
-          <p>The application begins with Spotify login, followed by a page showing recently played tracks. I kept the song cards and five mood options on the same screen because I wanted users to make those choices together.</p>
-          <p>The mood is selected manually rather than inferred from the song. Someone might choose a calm song but still want to look at energetic artwork, so I did not want the music to determine the results entirely.</p>
-          <p>On the results page, I kept the chosen song and mood in the corner while the artworks take up most of the screen. Each artwork includes its title and artist when that information is available.</p>
+          <p>After signing in with Spotify, users choose a recently played song and one of five moods. I kept both selections on the same screen and let users choose the mood themselves instead of having the application assign one based on their music.</p>
+          <p>The results page displays up to six artworks, with the selected song and mood still visible for context.</p>
         </div>
       </div>
 
@@ -86,28 +89,13 @@
         <figcaption class="bloom-real-caption">Choosing a recent track and a mood in one place.</figcaption>
       </figure>
 
-    </section>
-
-    <section class="bloom-sheet bloom-section" id="building" aria-labelledby="building-heading">
-      <div class="husk-heading">
-        <p class="bloom-section-num">03</p>
-        <h2 id="building-heading" class="bloom-section-title">Building the Application</h2>
-      </div>
       <div class="creative-starter-copy">
-        <h3 class="bloom-subsection-title">Working with Two APIs</h3>
+        <h3 class="bloom-subsection-title">Building with Two APIs</h3>
         <div class="bloom-body">
-          <p>I used Python and Flask to connect Spotify's listening history with the Art Institute of Chicago's collection. After retrieving the recent tracks, the application uses the selected mood to search for artworks through a set of related keywords.</p>
-          <p>For example, the dreamy mood searches for terms such as moon, cloud, and light. I also added basic filtering and ranking so the gallery could display a smaller set of results rather than every artwork returned by the API.</p>
+          <p>I built the application with Python and Flask. The selected mood determines which keywords are used to search the museum's collection. I also added filtering to remove duplicate tracks and exclude artworks without usable images.</p>
+          <p>Getting Spotify authentication to work took more time than I expected. Some artwork searches also returned incomplete data or no usable results, so I had to adjust how the application handled those cases.</p>
         </div>
       </div>
-
-      <ol class="bloom-body creative-starter-flow" aria-label="Application data flow">
-        <li>Spotify Authentication</li>
-        <li>Recent Tracks</li>
-        <li>Song + Mood Selection</li>
-        <li>Artwork Search</li>
-        <li>Results Gallery</li>
-      </ol>
 
       <figure class="creative-starter-shot">
         <a class="bloom-frame creative-starter-zoom" href="../assets/creative-starter/art-matches.png" data-screenshot aria-label="Enlarge the Art Matches gallery">
@@ -115,30 +103,6 @@
         </a>
         <figcaption class="bloom-real-caption">The selected song and mood stay visible alongside the artwork gallery.</figcaption>
       </figure>
-
-      <div class="creative-starter-copy">
-        <h3 class="bloom-subsection-title">When the APIs Did Not Work as Expected</h3>
-        <div class="bloom-body">
-          <p>Spotify authentication took more time than I anticipated. I ran into access issues while connecting the API and had to revisit how the application handled authorization.</p>
-          <p>The museum API created a different problem. Some searches returned artworks without usable images or complete information, so I added checks before displaying the results.</p>
-          <p>I had originally imagined a closer connection between the music and the artwork. As I worked through the API limitations, I focused on building a smaller experience that I could actually implement and explain.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="bloom-sheet bloom-section" id="reflection" aria-labelledby="reflection-heading">
-      <div class="husk-heading">
-        <p class="bloom-section-num">04</p>
-        <h2 id="reflection-heading" class="bloom-section-title">Reflection</h2>
-      </div>
-      <div class="creative-starter-copy">
-        <h3 class="bloom-subsection-title">What I Would Change</h3>
-        <div class="bloom-body">
-          <p>Creative Starter was my first experience bringing two external APIs into one web application. I learned more about how Flask routes work and how to handle data that does not always come back in the format I expect.</p>
-          <p>The biggest limitation is the relationship between the song and the artwork. Right now, the selected mood drives the search, while the song mainly provides context. The results can be interesting, but they are not necessarily connected to the music itself.</p>
-          <p>If I continued the project, I would want to explore whether musical characteristics could play a larger role in the search. I would also be interested in seeing what people actually do with the artworks they discover, especially whether the results help them begin a drawing or another creative task.</p>
-        </div>
-      </div>
 
       <figure class="creative-starter-video">
         <div class="bloom-frame">
@@ -152,9 +116,23 @@
       </figure>
     </section>
 
-    <a class="bloom-next" href="../bloom/">
+    <section class="bloom-sheet bloom-section" id="reflection" aria-labelledby="reflection-heading">
+      <div class="husk-heading">
+        <p class="bloom-section-num">03</p>
+        <h2 id="reflection-heading" class="bloom-section-title">Reflection</h2>
+      </div>
+      <div class="creative-starter-copy">
+        <h3 class="bloom-subsection-title">What I Learned</h3>
+        <div class="bloom-body">
+          <p>Creative Starter was my first experience combining two external APIs in one application. It taught me how to work with authentication, API responses, and data that doesn't always come back as expected.</p>
+          <p>The main limitation is that the artwork search depends on mood keywords rather than the musical characteristics of the selected song. If I continued developing it, I'd explore a closer connection between the music and the artwork, and see whether the results actually help people start a creative task.</p>
+        </div>
+      </div>
+    </section>
+
+    <a class="bloom-next" href="cooking.html">
       <span class="bloom-small-label">Next project ›</span>
-      <span class="bloom-next-title">Bloom</span>
+      <span class="bloom-next-title">HusCooks</span>
     </a>
   </main>
 
